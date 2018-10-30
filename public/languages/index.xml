@@ -2,12 +2,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Languages on techie guide..</title>
-    <link>http://localhost:1313/languages/</link>
+    <link>https://adoring-euclid-0f6ef9.netlify.com/languages/</link>
     <description>Recent content in Languages on techie guide..</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     
-	<atom:link href="http://localhost:1313/languages/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://adoring-euclid-0f6ef9.netlify.com/languages/index.xml" rel="self" type="application/rss+xml" />
     
     
   </channel>

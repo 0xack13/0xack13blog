@@ -3,22 +3,22 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>http://localhost:1313/categories/</loc>
+    <loc>https://adoring-euclid-0f6ef9.netlify.com/categories/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/languages/</loc>
+    <loc>https://adoring-euclid-0f6ef9.netlify.com/languages/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/tags/</loc>
+    <loc>https://adoring-euclid-0f6ef9.netlify.com/tags/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/</loc>
+    <loc>https://adoring-euclid-0f6ef9.netlify.com/</loc>
     <priority>0</priority>
   </url>
   

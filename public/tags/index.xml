@@ -2,12 +2,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on techie guide..</title>
-    <link>http://localhost:1313/tags/</link>
+    <link>https://adoring-euclid-0f6ef9.netlify.com/tags/</link>
     <description>Recent content in Tags on techie guide..</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     
-	<atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://adoring-euclid-0f6ef9.netlify.com/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
   </channel>
