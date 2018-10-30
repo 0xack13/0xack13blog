@@ -3,7 +3,41 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://adoring-euclid-0f6ef9.netlify.com/posts/hello/</loc>
+    <lastmod>2018-10-25T12:38:25+11:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://adoring-euclid-0f6ef9.netlify.com/posts/my-first-post/</loc>
+    <lastmod>2018-10-24T21:20:42+11:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://adoring-euclid-0f6ef9.netlify.com/categories/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://adoring-euclid-0f6ef9.netlify.com/tags/code/</loc>
+    <lastmod>2018-10-24T21:20:42+11:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://adoring-euclid-0f6ef9.netlify.com/tags/content/</loc>
+    <lastmod>2018-10-24T21:20:42+11:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://adoring-euclid-0f6ef9.netlify.com/categories/development/</loc>
+    <lastmod>2018-10-24T21:20:42+11:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://adoring-euclid-0f6ef9.netlify.com/tags/hugo/</loc>
+    <lastmod>2018-10-24T21:20:42+11:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -13,12 +47,32 @@
   </url>
   
   <url>
+    <loc>https://adoring-euclid-0f6ef9.netlify.com/posts/</loc>
+    <lastmod>2018-10-25T12:38:25+11:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://adoring-euclid-0f6ef9.netlify.com/categories/publishing/</loc>
+    <lastmod>2018-10-24T21:20:42+11:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://adoring-euclid-0f6ef9.netlify.com/tags/static-site-generator/</loc>
+    <lastmod>2018-10-24T21:20:42+11:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://adoring-euclid-0f6ef9.netlify.com/tags/</loc>
+    <lastmod>2018-10-24T21:20:42+11:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://adoring-euclid-0f6ef9.netlify.com/</loc>
+    <lastmod>2018-10-25T12:38:25+11:00</lastmod>
     <priority>0</priority>
   </url>
   

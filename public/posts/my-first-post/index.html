@@ -1,0 +1,408 @@
+<!doctype html>
+<html>
+<head>
+    <base href="/">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="author" content="">
+
+<meta name="description" content="">
+
+<title>My First Post</title>
+<meta name="generator" content="Hugo 0.49.2" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.1.0/styles/pojoaque.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.1.0/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+<link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,700" rel="stylesheet" type="text/css">
+<link  href="https://adoring-euclid-0f6ef9.netlify.com//css/theme.min.css" rel="stylesheet" type="text/css">
+
+</head>
+<body>
+<div class="page-container container-fluid">
+<div class="col-md-3 menu">
+    <nav class="col-md-3">
+    <h3 class="home-link"><a href="https://adoring-euclid-0f6ef9.netlify.com/">Root</a></h3>
+    <div id="last-posts" class="open">
+        <h3 data-open="last-posts">techie guide.. - Most recent posts</h3>
+        <ul>
+            
+            <li><a href="https://adoring-euclid-0f6ef9.netlify.com/posts/hello/">Hello</a></li>
+            
+            <li><a href="https://adoring-euclid-0f6ef9.netlify.com/posts/my-first-post/">My First Post</a></li>
+            
+        </ul>
+    </div>
+
+    
+    <div id="tags" class="open">
+        <h3 data-open="tags">Tags</h3>
+        <ul class="tags">
+            
+            <li><a href="/tags/code">code</a></li>
+            
+            <li><a href="/tags/content">content</a></li>
+            
+            <li><a href="/tags/hugo">hugo</a></li>
+            
+            <li><a href="/tags/static-site-generator">static-site-generator</a></li>
+            
+        </ul>
+    </div>
+    
+
+    
+    <div id="categories" class="open">
+        <h3 data-open="categories">Categories</h3>
+        <ul class="categories">
+            
+            <li><a href="/categories/development">development</a></li>
+            
+            <li><a href="/categories/publishing">publishing</a></li>
+            
+        </ul>
+    </div>
+    
+</nav>
+
+</div>
+<div class="col-md-9 content">
+
+<h1>My First Post</h1>
+<h4>Published 10-24-2018 21:20:42</h4>
+
+<a href="https://twitter.com/share" class="twitter-share-button" data-via="kendo5731"></a>
+<script>!function (d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0], p = /^http:/.test(d.location) ? 'http' : 'https';
+    if (!d.getElementById(id)) {
+        js = d.createElement(s);
+        js.id = id;
+        js.src = p + '://platform.twitter.com/widgets.js';
+        fjs.parentNode.insertBefore(js, fjs);
+    }
+}(document, 'script', 'twitter-wjs');</script>
+
+<div class="fb-share-button" data-href="https://adoring-euclid-0f6ef9.netlify.com/posts/my-first-post/" data-layout="button"></div>
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en-US/sdk.js#xfbml=1&version=v2.5";
+    fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<article>
+    
+
+<p>In these series, I will show lessons that I noticed during my learning journey of the javaascript language. I&rsquo;m trying here to highlight on each tip on a practical way rather than devling into the details. Just keep in mind that <code>Mozilla</code> documentation should be your friend and you should be familiar with it.</p>
+
+<p>Well, I&rsquo;d couldn&rsquo;t help it either. So, you can skip to your tip.</p>
+
+<ul>
+<li><a href="#defineProperty">defineProperty</a></li>
+<li><a href="#~indexOf">~indexOf</a></li>
+<li><a href="#__proto__ and prototype"><strong>proto</strong> and prototype</a></li>
+<li><a href="#callvsapply">call vs. apply</a></li>
+<li><a href="#Clojure">Clojure</a></li>
+<li><a href="#Hoisting">Hoisting</a></li>
+<li><a href="#Shadowing">Shadowing</a></li>
+<li><a href="#patterns">patterns</a></li>
+<li><a href="#strictMode">Strict Mode</a></li>
+<li><a href="#Prmoise">Pormise</a></li>
+<li><a href="#generators">generator</a></li>
+<li><a href="#iterators">iterators</a></li>
+<li><a href="#callbacks">callback</a></li>
+<li><a href="#currying">currying</a></li>
+<li><a href="#async">async</a></li>
+<li><a href="#this">this</a></li>
+</ul>
+
+<h3 id="a-id-defineproperty-a-defineproperty"><a id="defineProperty"></a> defineProperty</h3>
+
+<p>As the name implies, <code>defineProperty</code> defines a new property on an object.</p>
+
+<p>{% highlight javascript %}</p>
+
+<p>/** initialize an empty object literal */
+example = {};
+// ▹ {}</p>
+
+<p>Object.defineProperty(example, &lsquo;saySomething&rsquo;, {
+    get: function() {
+      return &ldquo;saySomething getter!&rdquo;;
+    },
+    set: function(value) {
+      return value;
+    }
+ });</p>
+
+<p>/** Check whether the &lsquo;saySomething&rsquo; property exists or not. */
+example.hasOwnProperty(&lsquo;saySomething&rsquo;)
+// ▹ true</p>
+
+<p>example.saySomething
+// ▹ &lsquo;saySomething getter!&rsquo;</p>
+
+<p>{% endhighlight %}</p>
+
+<p>It would be really practical to come up with a scenario that all <code>String</code> objects should have a <code>reverse</code> function which obviously should reverse the each letter in the <code>String</code> object. That can simply achieved by using <code>defineProperty</code> to add the new property <code>customReverse</code> to <code>String.prototype</code>.</p>
+
+<p>{% highlight javascript %}</p>
+
+<p>if (!String.prototype.customReverse) {
+  Object.defineProperty(String.prototype, &lsquo;customReverse&rsquo;, {
+    value: function() {
+      /** Just note that <code>reverse()</code> method here is used to reverse an <code>Array</code> */
+      return this.split(&ldquo;).reverse().join(&rdquo;);
+    }
+  });
+}</p>
+
+<p>&lsquo;ABCD&hellip;&rsquo;.customReverse()
+// ▹ &lsquo;&hellip;DCBA&rsquo;</p>
+
+<p>{% endhighlight %}</p>
+
+<h3 id="a-id-indexof-a-indexof"><a id="~indexOf"></a>~indexOf</h3>
+
+<p><code>indexOf</code> is a case-sensitive method that returns the index within the calling <code>String</code> of the first matching <code>String</code> in its specified value. The return value is:
+* <code>-1</code> if not found
+* Positive integer value (including <code>0</code>) of the index in the calling <code>String</code>. Well, that makes sense since the <code>String</code> index will start from <code>0</code>.</p>
+
+<p>{% highlight javascript %}</p>
+
+<p>&lsquo;ABCD&rsquo;.indexOf(&lsquo;C&rsquo;)
+// ▹ 2
+&lsquo;ABCD&rsquo;.indexOf(&lsquo;Z&rsquo;)
+// ▹ -1
+&lsquo;ABCD&rsquo;.indexOf(&lsquo;A&rsquo;)
+// ▹ 0</p>
+
+<p>{% endhighlight %}</p>
+
+<p>The most important note is that the return value of this method doesn&rsquo;t evaluate to <code>true</code> or <code>false</code>. So, it&rsquo;s your responsiblity to validate that. A very classical approach to achieve that is to check if the return value of the index is above <code>-1</code>.</p>
+
+<p>Let&rsquo;s test that by using the ternary operator <code>?</code>:</p>
+
+<p>{% highlight javascript %}</p>
+
+<p>&lsquo;ABCD&rsquo;.indexOf(&lsquo;A&rsquo;) &gt;= 0 ? &ldquo;Found!&rdquo; : &ldquo;Oops, not found..&rdquo;;
+// ▹ &lsquo;Found!&rsquo;
+&lsquo;ABCD&rsquo;.indexOf(&lsquo;Z&rsquo;) &gt;= 0 ? &ldquo;Found!&rdquo; : &ldquo;Oops, not found..&rdquo;;
+// ▹ &lsquo;Oops, not found..&rsquo;</p>
+
+<p>{% endhighlight %}</p>
+
+<p>A cleaner way to get around that <code>&gt;=0</code> syntax is to use the binary <code>NOT</code> operator <code>~</code>. This will simply make the code cleaner by returning <code>true</code> or <code>false</code> for the index values. Therefore:</p>
+
+<p>{% highlight javascript %}</p>
+
+<p>~&lsquo;ABCD&rsquo;.indexOf(&lsquo;A&rsquo;) ? &ldquo;Found!&rdquo; : &ldquo;Oops, not found..&rdquo;;
+// ▹ &lsquo;Found!&rsquo;
+~&lsquo;ABCD&rsquo;.indexOf(&lsquo;Z&rsquo;) ? &ldquo;Found!&rdquo; : &ldquo;Oops, not found..&rdquo;;
+// ▹ &lsquo;Oops, not found..&rsquo;</p>
+
+<p>{% endhighlight %}</p>
+
+<h3 id="a-id-proto-and-prototype-a-proto-and-prototype"><a id="__proto__ and prototype"></a> __proto__ and prototype</h3>
+
+<p>The <code>prototype</code> property exists functions. Say for example:</p>
+
+<p>{% highlight javascript %}</p>
+
+<p>function dummyFunc() {
+  return &lsquo;check my prototype property&rsquo;;
+}</p>
+
+<p>{% endhighlight %}</p>
+
+<h3 id="a-id-callvsapply-a-call-vs-apply"><a id="callvsapply"></a> call vs. apply</h3>
+
+<p>{% highlight javascript %}</p>
+
+<p>speak.apply(fatRabbit, [&ldquo;Burp!&rdquo;]);
+// ▹ The fat rabbit says &lsquo;Burp!&rsquo;
+speak.call({type: &ldquo;old&rdquo;}, &ldquo;Oh my.&rdquo;);
+// ▹ The old rabbit says &lsquo;Oh my.&rsquo;</p>
+
+<p>{% endhighlight %}</p>
+
+<h3 id="a-id-closure-a-closure"><a id="Closure"></a> Closure</h3>
+
+<p>Closure can be a daunting concept to get your head around it. The best way to think of it is to remember that a closure should have:
+* Outer Function
+* Inner Function (which is inside the outer function)
+* Variables in the outer function are accessible by the inner function. Even after the outer function has returned.</p>
+
+<p>{% highlight javascript %}
+/** Outer Function */
+function colorMyCar() {
+    /** Variable in the Outer Function */
+    var myCarName = &ldquo;Nissan&rdquo;;
+    /** Inner Function */
+    function colorIt(colorName) {
+        /** Variables in the OF is accessible here (in the IF) */
+        return myCarName + &ldquo; is &rdquo; + colorName;
+    }
+    /** Return the IF */
+    return colorIt;
+}</p>
+
+<p>var c = colorMyCar();
+// ▹ undefined
+c(&ldquo;Red!&rdquo;)
+// ▹ &lsquo;Nissan is Red!&rsquo;
+// ▹ &lsquo;Nissan is Red!&rsquo;
+// ▹ &lsquo;Nissan is Red!&rsquo;
+c(&ldquo;Yellow!&rdquo;)
+// ▹ &lsquo;Nissan is Yellow!&rsquo;
+c(&ldquo;Blue!&rdquo;)
+// ▹ &lsquo;Nissan is Blue!&rsquo;</p>
+
+<p>{% endhighlight %}</p>
+
+<h3 id="a-id-hoisting-a-hoisting"><a id="Hoisting"></a> Hoisting</h3>
+
+<p>As its name implies, hoisting is the mechansim of moving the <code>decleration</code> and <code>NOT initialization</code> of the variables and functions.</p>
+
+<p>{% highlight javascript %}
+/** Outer Function */
+function tellAStory3() {
+      console.log(varBelow);
+      varBelow = &ldquo;Got hoisted!&rdquo;;
+      var varBelow;
+};
+{% endhighlight %}</p>
+
+<h3 id="a-id-shadowing-a-shadowing"><a id="Shadowing"></a> Shadowing</h3>
+
+<p>Shadowing can help in defining the same variable name in a different scope.</p>
+
+<h3 id="a-id-iterator-a-iterator"><a id="Iterator"></a> Iterator</h3>
+
+<p>Iterator is an object that uses <code>next</code> to move to the next item of the sequence. Therefore, it knows its position in the sequence. One important note to remember is that you don&rsquo;t need to maintain the state of an iterator. This is the opposite of a <code>generator</code>.</p>
+
+<h3 id="a-id-generator-a-generator"><a id="generator"></a> Generator</h3>
+
+<p>A generator uses <code>yield</code> method that can pause or resume the generator. In order to execute the generator, you should use the <code>next</code> method which will execute the generator until it reaches the <code>yield</code> line.</p>
+
+<p>{% highlight javascript %}</p>
+
+<p>/** Generator syntax function* <em>/
+function</em> getStates() {
+  yield &lsquo;First&rsquo;;
+  yield &lsquo;Second&rsquo;;
+  yield &lsquo;Last&rsquo;;
+}</p>
+
+<p>for (let state of getStates()) {
+  console.log(state);
+}</p>
+
+<p>// ▹ First
+// ▹ Second
+// ▹ Last</p>
+
+<p>{% endhighlight %}</p>
+
+<p>Now, let&rsquo;s modify the above code with a pause/resume capability.</p>
+
+<p>{% highlight javascript %}</p>
+
+<p>/** Generator syntax function* <em>/
+function</em> getStates() {
+  console.log(&ldquo;Before First&rdquo;);
+  yield &lsquo;First&rsquo;;
+  console.log(&ldquo;After First and Before Second&rdquo;);
+  yield &lsquo;Second&rsquo;;
+  console.log(&ldquo;After Second and Before Third&rdquo;);
+  yield &lsquo;Last&rsquo;;
+  console.log(&ldquo;I&rsquo;m done!&rdquo;);
+}</p>
+
+<p>let gs = getStates();</p>
+
+<p>console.log(&ldquo;Calling next for the first time..&rdquo;);
+console.log(gs.next());</p>
+
+<p>console.log(&ldquo;Calling next for the second time..&rdquo;);
+console.log(gs.next());</p>
+
+<p>console.log(&ldquo;Calling next for the third [last] time..&ldquo;);
+console.log(gs.next());</p>
+
+<p>console.log(&ldquo;Calling next for the fourth time..&rdquo;);
+console.log(gs.next());</p>
+
+<p>// ▹ Calling next for the first time..
+// ▹ Before First
+// ▹ { value: &lsquo;First&rsquo;, done: false }</p>
+
+<p>// ▹ Calling next for the second time..
+// ▹ After First and Before Second
+// ▹ { value: &lsquo;Second&rsquo;, done: false }</p>
+
+<p>// ▹ Calling next for the third [last] time..
+// ▹ After Second and Before Third
+// ▹ { value: &lsquo;Last&rsquo;, done: false }</p>
+
+<p>// ▹ Calling next for the fourth time..
+// ▹ I&rsquo;m done!
+// ▹ { value: undefined, done: true }</p>
+
+<p>{% endhighlight %}</p>
+
+<h3 id="a-id-vallback-a-callback"><a id="vallback"></a> Callback</h3>
+
+<p>Simply put, <code>Callback</code> is a mechanism of passing a function to another function as an argument.</p>
+
+<p>{% highlight javascript %}</p>
+
+<p>function greetMe() {
+  console.log(&lsquo;Callback says: Hello there!&lsquo;);
+}</p>
+
+<p>function callingFunc(callbackFunc) {
+  console.log(&ldquo;I&rsquo;m going to call a callback!&rdquo;);
+  callbackFunc();
+}</p>
+
+<p>callingFunc(greetMe);</p>
+
+<p>// ▹ I&rsquo;m going to call a callback!
+// ▹ Callback says: Hello there!</p>
+
+<p>{% endhighlight %}</p>
+
+<p>I had difficulties working with Mail client in my Macbook Pro 15&rdquo;. While I&rsquo;m really happy about the Retina high DPI resolution, I&rsquo;m still can&rsquo;t composing a new email as the font of the new email is very small. Well, this is a trivial task if you consider using Chrome, Terminal or a code editor. However, the Accessiblity Preference comes very handy here.</p>
+
+
+<figure>
+    
+        <img src="/images/accessiblity-zoom-enabled.png" />
+    
+    
+    <figcaption>
+        <h4>Enable Zooming in the Accessiblity Preference</h4>
+        
+    </figcaption>
+    
+</figure>
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">main</span>():
+    <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">pass</span></code></pre></div>
+
+</article>
+
+
+
+</div>
+</div>
+<script src="https://adoring-euclid-0f6ef9.netlify.com//js/theme.min.js" type="text/javascript"></script>
+
+
+</body>
+</html>
+

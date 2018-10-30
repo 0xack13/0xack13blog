@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>techie guide..</title>
-    <link>https://adoring-euclid-0f6ef9.netlify.com/</link>
-    <description>Recent content on techie guide..</description>
+    <title>Posts on techie guide..</title>
+    <link>https://adoring-euclid-0f6ef9.netlify.com/posts/</link>
+    <description>Recent content in Posts on techie guide..</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 25 Oct 2018 12:38:25 +1100</lastBuildDate>
     
-	<atom:link href="https://adoring-euclid-0f6ef9.netlify.com/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://adoring-euclid-0f6ef9.netlify.com/posts/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>

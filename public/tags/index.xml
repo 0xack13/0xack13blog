@@ -6,9 +6,46 @@
     <description>Recent content in Tags on techie guide..</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
+    <lastBuildDate>Wed, 24 Oct 2018 21:20:42 +1100</lastBuildDate>
     
 	<atom:link href="https://adoring-euclid-0f6ef9.netlify.com/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Code</title>
+      <link>https://adoring-euclid-0f6ef9.netlify.com/tags/code/</link>
+      <pubDate>Wed, 24 Oct 2018 21:20:42 +1100</pubDate>
+      
+      <guid>https://adoring-euclid-0f6ef9.netlify.com/tags/code/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Content</title>
+      <link>https://adoring-euclid-0f6ef9.netlify.com/tags/content/</link>
+      <pubDate>Wed, 24 Oct 2018 21:20:42 +1100</pubDate>
+      
+      <guid>https://adoring-euclid-0f6ef9.netlify.com/tags/content/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Hugo</title>
+      <link>https://adoring-euclid-0f6ef9.netlify.com/tags/hugo/</link>
+      <pubDate>Wed, 24 Oct 2018 21:20:42 +1100</pubDate>
+      
+      <guid>https://adoring-euclid-0f6ef9.netlify.com/tags/hugo/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Static Site Generator</title>
+      <link>https://adoring-euclid-0f6ef9.netlify.com/tags/static-site-generator/</link>
+      <pubDate>Wed, 24 Oct 2018 21:20:42 +1100</pubDate>
+      
+      <guid>https://adoring-euclid-0f6ef9.netlify.com/tags/static-site-generator/</guid>
+      <description></description>
+    </item>
     
   </channel>
 </rss>

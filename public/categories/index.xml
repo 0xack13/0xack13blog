@@ -10,5 +10,23 @@
 	<atom:link href="https://adoring-euclid-0f6ef9.netlify.com/categories/index.xml" rel="self" type="application/rss+xml" />
     
     
+    <item>
+      <title>Development</title>
+      <link>https://adoring-euclid-0f6ef9.netlify.com/categories/development/</link>
+      <pubDate>Wed, 24 Oct 2018 21:20:42 +1100</pubDate>
+      
+      <guid>https://adoring-euclid-0f6ef9.netlify.com/categories/development/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Publishing</title>
+      <link>https://adoring-euclid-0f6ef9.netlify.com/categories/publishing/</link>
+      <pubDate>Wed, 24 Oct 2018 21:20:42 +1100</pubDate>
+      
+      <guid>https://adoring-euclid-0f6ef9.netlify.com/categories/publishing/</guid>
+      <description></description>
+    </item>
+    
   </channel>
 </rss>
