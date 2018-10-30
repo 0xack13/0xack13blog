@@ -1,0 +1,9 @@
+baseURL = "http://localhost:1313/"
+languageCode = "en-us"
+title = "techie guide.."
+share = false
+footnoteReturnLinkContents = "↩"
+[taxonomies]
+  tag = "tags"
+  category = "categories"
+  languages = "languages"
