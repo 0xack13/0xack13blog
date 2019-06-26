@@ -9,15 +9,12 @@ Assuming that you have the correct docker environment, asp.net core app can run 
 {{< highlight docker >}}
 FROM mcr.microsoft.com/dotnet/core/sdk:2.2 AS build-env
 WORKDIR /app
-
 # Copy csproj and restore as distinct layers
 COPY *.csproj ./
 RUN dotnet restore
-
 # Copy everything else and build
 COPY . ./
 RUN dotnet publish -c Release -o out
-
 # Build runtime image
 FROM mcr.microsoft.com/dotnet/core/aspnet:2.2
 WORKDIR /app
@@ -36,6 +33,7 @@ FROM mcr.microsoft.com/dotnet/core/sdk:2.2 AS build-env
 # Stage #2
 FROM mcr.microsoft.com/dotnet/core/aspnet:2.2
 ```
+The container can be run using the following:
 
 ```bash
 $ docker run -d -p 80:80 --name app aspnetapp
