@@ -7,6 +7,16 @@ html {
 body {
   margin: 0; }
 
+  .col{
+    border: 1px dotted #000;
+    min-height: 50px;
+  }
+  
+  .collapse {
+    height: 200px;
+    background: rgba(0,0,0,0.3);
+  }
+
 article,
 aside,
 details,
