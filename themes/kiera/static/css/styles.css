@@ -162,9 +162,10 @@ time {
 
 #container main article p code {
   padding: 0.2em;
-  background-color:darkorange;
+  background-color:gray;
   color: black;
   font-size: 0.9em;
+  border-radius: 10%;
 }
 
 #container main article p kbd {
