@@ -1,13 +1,7 @@
 baseURL = "https://adoring-euclid-0f6ef9.netlify.com/"
 languageCode = "en-us"
-title = "techie guide.."
+title = "Software Development Rambling"
 share = false
-theme = "kiera"
+menu = "main"
+meta = "false"
 footnoteReturnLinkContents = "↩"
-[taxonomies]
-  tag = "tags"
-  category = "categories"
-  languages = "languages"
-# tgest
-[params]
-  codeeditor_menu_mostrecentposts=false
