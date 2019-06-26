@@ -122,10 +122,10 @@ The following java `pom.xml` file can be used:
 Golang can be easily containerized using the following:
 
 {{< highlight docker >}}
- FROM golang:latest                                                                                  
- RUN mkdir /app                                                                                      
- ADD . /app                                                                                          
- WORKDIR /app                                                                                        
- RUN go build -o main .                                                                              
- CMD ["/app/main"] 
+FROM golang:latest                                                                                  
+RUN mkdir /app                                                                                      
+ADD . /app                                                                                          
+WORKDIR /app                                                                                        
+RUN go build -o main .                                                                              
+CMD ["/app/main"] 
 {{< /highlight >}}
