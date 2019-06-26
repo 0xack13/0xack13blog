@@ -7,3 +7,5 @@ footnoteReturnLinkContents = "↩"
   tag = "tags"
   category = "categories"
   languages = "languages"
+[params]
+  codeeditor_menu_mostrecentposts=false
