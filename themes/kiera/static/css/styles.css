@@ -162,7 +162,8 @@ time {
 
 #container main article p code {
   padding: .1rem .3rem .2rem;
-  background-color:gray;
+  background-image: linear-gradient(to right, rgb(252, 228, 237), rgb(255, 232, 204));
+  /* background-color:gray; */
   color: black;
   font-size: 90%;
   border-radius: 0.2rem;
