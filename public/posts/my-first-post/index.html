@@ -120,27 +120,26 @@
 
 <p>As the name implies, <code>defineProperty</code> defines a new property on an object.</p>
 
-<pre><code class="language-javascript">/** initialize an empty object literal */
-example = {};
-// ▹ {}
-
-Object.defineProperty(example, 'saySomething', { 
-    get: function() {
-      return &quot;saySomething getter!&quot;;
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#75715e">/** initialize an empty object literal */</span>
+<span style="color:#a6e22e">example</span> <span style="color:#f92672">=</span> {};
+<span style="color:#75715e">// ▹ {}
+</span><span style="color:#75715e"></span>
+Object.<span style="color:#a6e22e">defineProperty</span>(<span style="color:#a6e22e">example</span>, <span style="color:#e6db74">&#39;saySomething&#39;</span>, { 
+    <span style="color:#a6e22e">get</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">function</span>() {
+      <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;saySomething getter!&#34;</span>;
     },
-    set: function(value) {
-      return value;
+    <span style="color:#a6e22e">set</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">value</span>) {
+      <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">value</span>;
     }
  });
 
-/** Check whether the 'saySomething' property exists or not. */
-example.hasOwnProperty('saySomething')
-// ▹ true
-
-example.saySomething
-// ▹ 'saySomething getter!'
-
-</code></pre>
+<span style="color:#75715e">/** Check whether the &#39;saySomething&#39; property exists or not. */</span>
+<span style="color:#a6e22e">example</span>.<span style="color:#a6e22e">hasOwnProperty</span>(<span style="color:#e6db74">&#39;saySomething&#39;</span>)
+<span style="color:#75715e">// ▹ true
+</span><span style="color:#75715e"></span>
+<span style="color:#a6e22e">example</span>.<span style="color:#a6e22e">saySomething</span>
+<span style="color:#75715e">// ▹ &#39;saySomething getter!&#39;
+</span></code></pre></div>
 
 <p>It would be really practical to come up with a scenario that all <code>String</code> objects should have a <code>reverse</code> function which obviously should reverse the each letter in the <code>String</code> object. That can simply achieved by using <code>defineProperty</code> to add the new property <code>customReverse</code> to <code>String.prototype</code>.</p>
 
