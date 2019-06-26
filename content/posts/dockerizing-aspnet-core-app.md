@@ -26,6 +26,17 @@ COPY --from=build-env /app/out .
 ENTRYPOINT ["dotnet", "DemoApp.dll"]%
 {{< /highlight >}}
 
+You might have noticed that the docker file in the previous example uses multi-stage builds in docker.  
+
+```Docker
+# Stage #1
+FROM mcr.microsoft.com/dotnet/core/sdk:2.2 AS build-env
+...
+
+# Stage #2
+FROM mcr.microsoft.com/dotnet/core/aspnet:2.2
+```
+
 In case, Spring Boot is being used:
 
 {{< highlight docker >}}
