@@ -18,8 +18,7 @@
       
       <guid>https://adoring-euclid-0f6ef9.netlify.com/posts/hello/</guid>
       <description>Xamarin Forms bring a lot of flexiblity in terms of the mobile development for both iOS and Android platforms.
-public class Book { public string BookName { get; set; } }  Let&amp;rsquo;s feed a list of books with random data:
-ObservableCollection&amp;lt;Employee&amp;gt; employees = new ObservableCollection&amp;lt;Employee&amp;gt;(); public FirstListViewSppPage() { InitializeComponent(); books.Add(new Book { DisplayName = &amp;quot;Rob Finnerty&amp;quot; }); books.Add(new Book { DisplayName = &amp;quot;Bill Wrestler&amp;quot; }); books.Add(new Book { DisplayName = &amp;quot;Dr.</description>
+public class Book { public string BookName { get; set; } }  Let&amp;rsquo;s feed a list of books with random data:</description>
     </item>
     
     <item>
@@ -28,9 +27,7 @@ ObservableCollection&amp;lt;Employee&amp;gt; employees = new ObservableCollectio
       <pubDate>Wed, 24 Oct 2018 21:20:42 +1100</pubDate>
       
       <guid>https://adoring-euclid-0f6ef9.netlify.com/posts/my-first-post/</guid>
-      <description>In these series, I will show lessons that I noticed during my learning journey of the javaascript language. I&amp;rsquo;m trying here to highlight on each tip on a practical way rather than devling into the details. Just keep in mind that Mozilla documentation should be your friend and you should be familiar with it.
-Well, I&amp;rsquo;d couldn&amp;rsquo;t help it either. So, you can skip to your tip.
- defineProperty ~indexOf proto and prototype call vs.</description>
+      <description>In these series, I will show lessons that I noticed during my learning journey of the javaascript language. I&amp;rsquo;m trying here to highlight on each tip on a practical way rather than devling into the details.</description>
     </item>
     
   </channel>
