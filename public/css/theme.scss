@@ -61,6 +61,10 @@ a {
       }
     }
 
+    h1 {
+      color: $bg-color;
+    }
+
     h3 {
       @extend .no-user-select;
       cursor: pointer;
