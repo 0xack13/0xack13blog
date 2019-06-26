@@ -4,13 +4,14 @@
   "repository": "https://github.com/aubm/aubm-website-theme.git",
   "license": "MIT",
   "dependencies": {
-    "bootstrap-sass": "^3.3.6"
+    "bootstrap-sass": "^3.3.6",
+    "require-dir": ""
   },
   "devDependencies": {
-    "gulp": "^3.9.0",
+    "gulp": "^4.0.2",
     "gulp-bump": "^1.0.0",
     "gulp-concat": "^2.6.0",
-    "gulp-conventional-changelog": "^0.7.0",
+    "gulp-conventional-changelog": "^2.0.20",
     "gulp-cssnano": "^2.1.0",
     "gulp-git": "^1.7.0",
     "gulp-rename": "^1.2.2",
