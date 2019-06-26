@@ -6,7 +6,7 @@ homepage = "http://github.com/avianto/hugo-kiera"
 tags = ["blog","minimal","responsive"]
 features = ["blog","disqus","google-analytics","font-awesome"]
 min_version = "0.30.2"
-copyright = "© 2019 0xguid.  <a href=\"http://creativecommons.org/licenses/by/4.0/\">Some rights reserved</a>."
+Copyright = "© 2019 0xguid.  <a href=\"http://creativecommons.org/licenses/by/4.0/\">Some rights reserved</a>."
 
 
 [author]
