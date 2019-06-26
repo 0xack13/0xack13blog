@@ -6,13 +6,23 @@
     <description>Recent content in Posts on 0xguid</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 25 Oct 2018 12:38:25 +1100</lastBuildDate>
+    <lastBuildDate>Wed, 26 Jun 2019 06:56:18 -0400</lastBuildDate>
     
 	<atom:link href="https://adoring-euclid-0f6ef9.netlify.com/posts/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Hello</title>
+      <title>Dockerizing Aspnet Core App</title>
+      <link>https://adoring-euclid-0f6ef9.netlify.com/posts/dockerizing-aspnet-core-app/</link>
+      <pubDate>Wed, 26 Jun 2019 06:56:18 -0400</pubDate>
+      
+      <guid>https://adoring-euclid-0f6ef9.netlify.com/posts/dockerizing-aspnet-core-app/</guid>
+      <description>Assuming that you have the correct docker environment, asp.net core app can run in a container using the following:
+FROMmcr.microsoft.com/dotnet/core/sdk:2.2 AS build-envWORKDIR/app# Copy csproj and restore as distinct layersCOPY *.csproj .</description>
+    </item>
+    
+    <item>
+      <title>Dockerizing ASP.NET core app</title>
       <link>https://adoring-euclid-0f6ef9.netlify.com/posts/hello/</link>
       <pubDate>Thu, 25 Oct 2018 12:38:25 +1100</pubDate>
       

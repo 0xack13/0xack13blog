@@ -1,5 +1,5 @@
 ---
-title: "Hello"
+title: "Dockerizing ASP.NET core app"
 date: 2018-10-25T12:38:25+11:00
 draft: true
 ---
