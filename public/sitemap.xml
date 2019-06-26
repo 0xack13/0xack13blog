@@ -4,19 +4,24 @@
   
   <url>
     <loc>https://adoring-euclid-0f6ef9.netlify.com/</loc>
-    <lastmod>2019-06-26T06:56:18-04:00</lastmod>
+    <lastmod>2019-06-26T14:49:47-04:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://adoring-euclid-0f6ef9.netlify.com/posts/azure-devops-ssh-tasks/</loc>
+    <lastmod>2019-06-26T14:49:47-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://adoring-euclid-0f6ef9.netlify.com/posts/</loc>
+    <lastmod>2019-06-26T14:49:47-04:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://adoring-euclid-0f6ef9.netlify.com/posts/dockerizing-aspnet-core-app/</loc>
     <lastmod>2019-06-26T06:56:18-04:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://adoring-euclid-0f6ef9.netlify.com/posts/</loc>
-    <lastmod>2019-06-26T06:56:18-04:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>

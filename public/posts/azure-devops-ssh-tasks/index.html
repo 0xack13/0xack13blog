@@ -37,54 +37,47 @@
 
 
 
-<section id="list">
+<article>
+
+    <h1>Azure Devops Ssh Tasks</h1>
 
     
+        <aside>
+    <ul>
+        <li>
+            <time class="post-date" datetime="2019-06-26T14:49:47-04:00">Jun 26, 2019</time>
+        </li>
+        
+        
 
-    
-        <h2>Posts</h2>
+        
+
+        <li>1 min read</li>
+    </ul>
+</aside>
     
 
-    
+    <p>I took me some time to figure out that there is a difference in the type of the supported SSH keys in the task SSH to run a shell command or to copy files over SSH. It turns out that copy files over SSH supports PEM files which can be generated using the following command:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#f92672">[</span>azure@remotelinux ~<span style="color:#f92672">]</span>$ ssh-keygen -t rsa -m PEM</code></pre></div>
+<p>Using the generated private key, add the information to the <code>Service Connections</code> in the <code>Project Settings</code>.</p>
 
-    
+<p>The SSH task to execute shell commands support default types of OpenSSH private keys which don&rsquo;t necessiraly have to be PEM files. It&rsquo;s also worth mentioning that the PEM files are support by the SSH tasks to execute shell commands. So it&rsquo;s safe to say that you can also use PEM files for any SSH tasks.</p>
 
-    <h3>2019</h3>
+
+</article>
+
+
+<section class="post-nav">
     <ul>
         
         <li>
-            <a href="https://adoring-euclid-0f6ef9.netlify.com/posts/azure-devops-ssh-tasks/">DRAFT: Azure Devops Ssh Tasks</a>
-            <time class="date-meta">Jun 26</time>
+            <a href="https://adoring-euclid-0f6ef9.netlify.com/posts/dockerizing-aspnet-core-app/"><i class="fa fa-chevron-circle-left"></i> Dockerizing Aspnet Core App</a>
         </li>
         
-        <li>
-            <a href="https://adoring-euclid-0f6ef9.netlify.com/posts/dockerizing-aspnet-core-app/">DRAFT: Dockerizing Aspnet Core App</a>
-            <time class="date-meta">Jun 26</time>
-        </li>
         
     </ul>
-    
-    
-
-    <h3>2018</h3>
-    <ul>
-        
-        <li>
-            <a href="https://adoring-euclid-0f6ef9.netlify.com/posts/hello/">DRAFT: Dockerizing ASP.NET core app</a>
-            <time class="date-meta">Oct 25</time>
-        </li>
-        
-        <li>
-            <a href="https://adoring-euclid-0f6ef9.netlify.com/posts/my-first-post/">DRAFT: My First Post</a>
-            <time class="date-meta">Oct 24</time>
-        </li>
-        
-    </ul>
-    
-    
-
 </section>
-
+    
 
 
 
