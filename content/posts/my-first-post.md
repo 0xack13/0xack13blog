@@ -34,7 +34,7 @@ Well, I'd couldn't help it either. So, you can skip to your tip.
 
 As the name implies, `defineProperty` defines a new property on an object.
 
-```javascript
+{{< highlight javascript >}}
 /** initialize an empty object literal */
 example = {};
 // ▹ {}
@@ -55,7 +55,7 @@ example.hasOwnProperty('saySomething')
 example.saySomething
 // ▹ 'saySomething getter!'
 
-```
+{{< /highlight >}}
 
 It would be really practical to come up with a scenario that all `String` objects should have a `reverse` function which obviously should reverse the each letter in the `String` object. That can simply achieved by using `defineProperty` to add the new property `customReverse` to `String.prototype`.
 
