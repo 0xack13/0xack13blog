@@ -47,7 +47,7 @@ time {
 }
 
 #container header h1 a {
-  color: #000000;
+  color: white;
 }
 
 #container header ul {
@@ -90,7 +90,7 @@ time {
 }
 
 #container nav ul li a.active {
-  border-bottom: 0.5em solid #666666;
+  border-bottom: 0.5em solid greenyellow;
 }
 
 #container main {
@@ -161,7 +161,8 @@ time {
 
 #container main article p code {
   padding: 0.2em;
-  background-color: #ffcccc;
+  background-color: #1cf52e;
+  color: #f7f7f7;
   font-size: 0.9em;
 }
 
