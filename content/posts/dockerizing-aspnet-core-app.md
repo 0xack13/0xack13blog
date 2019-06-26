@@ -26,7 +26,7 @@ COPY --from=build-env /app/out .
 ENTRYPOINT ["dotnet", "DemoApp.dll"]%
 {{< /highlight >}}
 
-You might have noticed that the docker file in the previous example uses multi-stage builds in docker.  
+You might have noticed that the docker file in the previous example uses [multi-stage builds](https://docs.docker.com/develop/develop-images/multistage-build/) in docker.  
 
 ```Docker
 # Stage #1
