@@ -195,6 +195,8 @@ time {
 
 #container footer h6 {
   font-size: 0.8em;
+  margin-top: 0px;
+  padding-top: 0px;
 }
 
 .meta-aside, #container main section#home ul li aside, #container main article aside {

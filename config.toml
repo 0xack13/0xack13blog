@@ -8,7 +8,7 @@ footnoteReturnLinkContents = "↩"
 canonifyurls = true
 summaryLength = 30
 enableEmoji = true
-copyright = "Copyright &copy; 2017 - Author Name"
+copyright = "Copyright &copy; 2019 - Saleh"
 pygmentsCodeFences = true
 
 [author]
