@@ -118,3 +118,14 @@ The following java `pom.xml` file can be used:
 </project>
 
 {{< /highlight >}}
+
+Golang can be easily containerized using the following:
+
+{{< highlight docker >}}
+ FROM golang:latest                                                                                  
+ RUN mkdir /app                                                                                      
+ ADD . /app                                                                                          
+ WORKDIR /app                                                                                        
+ RUN go build -o main .                                                                              
+ CMD ["/app/main"] 
+{{< /highlight >}}
