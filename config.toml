@@ -8,4 +8,7 @@ footnoteReturnLinkContents = "↩"
 canonifyurls = true
 summaryLength = 30
 enableEmoji = true
-copyright = "© 2019 0xguid.  <a href=\"http://creativecommons.org/licenses/by/4.0/\">Some rights reserved</a>."
+[author]
+    name = "Saleh"       #Author name
+    github = "0xguid"     #Github username
+copyright = "© 2019 0xguid."
