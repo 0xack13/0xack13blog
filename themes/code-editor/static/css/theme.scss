@@ -17,10 +17,6 @@ body {
   &>.container-fluid {
     @extend .no-padding-left-and-right;
   }
-  code {
-    background-color: rgb(17, 209, 0);
-    color: black;
-  }
 }
 
 .page-container {

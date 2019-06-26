@@ -1052,7 +1052,7 @@ body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 14px;
   line-height: 1.42857;
-  color: #ffffff;
+  color: #839496;
   background-color: #fff; }
 
 input,
@@ -1064,12 +1064,13 @@ textarea {
   line-height: inherit; }
 
 a {
-  color: #14f100;
+  color: #2aa198;
   text-decoration: none; }
   a:hover, a:focus {
-    color: #0ea500;
+    color: #1a645f;
     text-decoration: underline; }
   a:focus {
+    outline: thin dotted;
     outline: 5px auto -webkit-focus-ring-color;
     outline-offset: -2px; }
 
@@ -2088,7 +2089,7 @@ table th[class*="col-"] {
   .hidden-print {
     display: none !important; } }
 
-.no-padding-left-and-right, body > .container-fluid {
+.no-padding-left-and-right, body > .container-fluid, .menu nav {
   padding-left: 0px;
   padding-right: 0px; }
 
@@ -2118,7 +2119,7 @@ ul.pagination {
     ul.pagination li.active {
       text-decoration: underline; }
     ul.pagination li.disabled a {
-      color: #ffffff; }
+      color: #839496; }
 
 html {
   height: 100%; }
@@ -2127,25 +2128,22 @@ body {
   min-height: 100%;
   height: 100%;
   font-family: 'Source Code Pro';
-  background-color: #00080a;
-  color: #ffffff;
+  background-color: #001f27;
+  color: #839496;
   overflow-x: hidden; }
-  body code {
-    background-color: #11d100;
-    color: black; }
 
 .page-container {
   height: 100%;
   min-height: 100%; }
 
 a {
-  color: #14f100; }
+  color: #2aa198; }
   a:hover {
-    color: #14f100;
+    color: #2aa198;
     text-decoration: underline; }
 
 .content {
-  background-color: #00080a;
+  background-color: #002b36;
   min-height: 100%;
   padding-top: 1px;
   padding-bottom: 15px; }
@@ -2157,8 +2155,6 @@ a {
   padding-left: 0px; }
   @media (min-width: 992px) {
     .menu nav {
-      padding-left: 0px;
-      padding-right: 0px;
       position: fixed;
       height: 100%;
       overflow-y: auto;
@@ -2185,9 +2181,9 @@ a {
       .menu nav ul li:before {
         margin-right: 8px; }
       .menu nav ul li:hover {
-        background-color: #4b4c4d; }
+        background-color: #003b4a; }
       .menu nav ul li a, .menu nav ul li a:hover {
-        color: #ffffff;
+        color: #839496;
         text-decoration: none; }
   @media (max-width: 991px) {
     .menu nav h3 {
