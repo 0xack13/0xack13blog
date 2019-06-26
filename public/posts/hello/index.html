@@ -58,47 +58,40 @@
     
 
     <p>Xamarin Forms bring a lot of flexiblity in terms of the mobile development for both iOS and Android platforms.</p>
-
-<pre><code class="language-c#">public class Book
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c#" data-lang="c#"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Book</span>
 {
-    public string BookName { get; set; }
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">string</span> BookName { <span style="color:#66d9ef">get</span>; <span style="color:#66d9ef">set</span>; }
 }
-</code></pre>
-
+</code></pre></div>
 <p>Let&rsquo;s feed a list of books with random data:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c#" data-lang="c#">ObservableCollection&lt;Employee&gt; employees = <span style="color:#66d9ef">new</span> ObservableCollection&lt;Employee&gt;();
 
-<pre><code class="language-c#">ObservableCollection&lt;Employee&gt; employees = new ObservableCollection&lt;Employee&gt;();
-
-public FirstListViewSppPage()
+<span style="color:#66d9ef">public</span> FirstListViewSppPage()
 {
     InitializeComponent();
 
 
-    books.Add(new Book { DisplayName = &quot;Rob Finnerty&quot; });
-    books.Add(new Book { DisplayName = &quot;Bill Wrestler&quot; });
-    books.Add(new Book { DisplayName = &quot;Dr. Geri-Beth Hooper&quot; });
-    books.Add(new Book { DisplayName = &quot;Dr. Keith Joyce-Purdy&quot; });
-    books.Add(new Book { DisplayName = &quot;Sheri Spruce&quot; });
-    books.Add(new Book { DisplayName = &quot;Burt Indybrick&quot; });
+    books.Add(<span style="color:#66d9ef">new</span> Book { DisplayName = <span style="color:#e6db74">&#34;Rob Finnerty&#34;</span> });
+    books.Add(<span style="color:#66d9ef">new</span> Book { DisplayName = <span style="color:#e6db74">&#34;Bill Wrestler&#34;</span> });
+    books.Add(<span style="color:#66d9ef">new</span> Book { DisplayName = <span style="color:#e6db74">&#34;Dr. Geri-Beth Hooper&#34;</span> });
+    books.Add(<span style="color:#66d9ef">new</span> Book { DisplayName = <span style="color:#e6db74">&#34;Dr. Keith Joyce-Purdy&#34;</span> });
+    books.Add(<span style="color:#66d9ef">new</span> Book { DisplayName = <span style="color:#e6db74">&#34;Sheri Spruce&#34;</span> });
+    books.Add(<span style="color:#66d9ef">new</span> Book { DisplayName = <span style="color:#e6db74">&#34;Burt Indybrick&#34;</span> });
 
 
     BookView.ItemsSource = books;
 }
-
-</code></pre>
-
+</code></pre></div>
 <p><code>ObservableCollection</code> is preferred generally in UI development over <code>List</code> due to the binding mechanism that is provided by this collection. Mainly, it implements <code>INotifyPropertyChanged</code>. You can find more about that in the Assembly Browser of the <code>ObservableCollection&lt;&gt;</code>:</p>
-
-<pre><code class="language-c#">namespace System.Collections.ObjectModel
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c#" data-lang="c#"><span style="color:#66d9ef">namespace</span> System.Collections.ObjectModel
 {
-    public class ObservableCollection&lt;T&gt; : Collection&lt;T&gt;, INotifyCollectionChanged, INotifyPropertyChanged
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">ObservableCollection</span>&lt;T&gt; : Collection&lt;T&gt;, INotifyCollectionChanged, INotifyPropertyChanged
     {
 
     ...
     }
 }
-</code></pre>
-
+</code></pre></div>
 
 </article>
 
@@ -125,7 +118,7 @@ public FirstListViewSppPage()
 
 </main>
     <footer>
-        <h6> | Rendered by <a href="https://gohugo.io" title="Hugo">Hugo</a> | <a href="https://adoring-euclid-0f6ef9.netlify.com/index.xml">Subscribe</a></h6>
+        <h6>Copyright &copy; 2017 - Author Name | Rendered by <a href="https://gohugo.io" title="Hugo">Hugo</a> | <a href="https://adoring-euclid-0f6ef9.netlify.com/index.xml">Subscribe</a></h6>
     </footer>
 </div>
 <script src="https://adoring-euclid-0f6ef9.netlify.com/js/scripts.js"></script>

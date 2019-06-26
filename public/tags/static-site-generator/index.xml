@@ -6,6 +6,7 @@
     <description>Recent content in static site generator on 0xguid</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
+    <copyright>Copyright &amp;copy; 2017 - Author Name</copyright>
     <lastBuildDate>Wed, 24 Oct 2018 21:20:42 +1100</lastBuildDate>
     
 	<atom:link href="https://adoring-euclid-0f6ef9.netlify.com/tags/static-site-generator/index.xml" rel="self" type="application/rss+xml" />
