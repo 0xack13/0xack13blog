@@ -37,6 +37,10 @@ FROM mcr.microsoft.com/dotnet/core/sdk:2.2 AS build-env
 FROM mcr.microsoft.com/dotnet/core/aspnet:2.2
 ```
 
+```bash
+$ docker run -d -p 80:80 --name app aspnetapp
+```
+
 In case, Spring Boot is being used:
 
 {{< highlight docker >}}
