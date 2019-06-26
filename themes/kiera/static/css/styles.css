@@ -144,8 +144,8 @@ time {
   list-style: none;
   display: flex;
   justify-content: space-between;
-  border-top: 1px solid #f7f7f7;
-  font-size: 0.9em;
+  /* border-top: 1px solid #f7f7f7; */
+  /* font-size: 0.9em; */
 }
 
 #container main article pre {
@@ -188,10 +188,10 @@ time {
 #container main h1 {
   margin-bottom: 1rem;
 }
-
+/* 
 #container footer {
-  border-top: solid 1px #cecece;
-}
+  border-top: solid px #cecece;
+} */
 
 #container footer h6 {
   font-size: 0.8em;
