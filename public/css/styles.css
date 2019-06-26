@@ -3,7 +3,8 @@ body {
   padding: 0;
   overflow-x: hidden;
   font-family: "Roboto Slab", serif;
-  color: #333333;
+  color: white;
+  background-color: #000000
 }
 
 h1,
