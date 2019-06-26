@@ -122,29 +122,27 @@
 
 <p>As the name implies, <code>defineProperty</code> defines a new property on an object.</p>
 
-<p>{% highlight javascript %}</p>
-
-<p>/** initialize an empty object literal */
+<pre><code class="language-javascript">/** initialize an empty object literal */
 example = {};
-// ▹ {}</p>
+// ▹ {}
 
-<p>Object.defineProperty(example, &lsquo;saySomething&rsquo;, {
+Object.defineProperty(example, 'saySomething', { 
     get: function() {
-      return &ldquo;saySomething getter!&rdquo;;
+      return &quot;saySomething getter!&quot;;
     },
     set: function(value) {
       return value;
     }
- });</p>
+ });
 
-<p>/** Check whether the &lsquo;saySomething&rsquo; property exists or not. */
-example.hasOwnProperty(&lsquo;saySomething&rsquo;)
-// ▹ true</p>
+/** Check whether the 'saySomething' property exists or not. */
+example.hasOwnProperty('saySomething')
+// ▹ true
 
-<p>example.saySomething
-// ▹ &lsquo;saySomething getter!&rsquo;</p>
+example.saySomething
+// ▹ 'saySomething getter!'
 
-<p>{% endhighlight %}</p>
+</code></pre>
 
 <p>It would be really practical to come up with a scenario that all <code>String</code> objects should have a <code>reverse</code> function which obviously should reverse the each letter in the <code>String</code> object. That can simply achieved by using <code>defineProperty</code> to add the new property <code>customReverse</code> to <code>String.prototype</code>.</p>
 
