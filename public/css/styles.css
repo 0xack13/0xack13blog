@@ -161,11 +161,11 @@ time {
 }
 
 #container main article p code {
-  padding: 0.2em;
+  padding: .1rem .3rem .2rem;
   background-color:gray;
   color: black;
-  font-size: 0.9em;
-  border-radius: 10%;
+  font-size: 90%;
+  border-radius: 0.2rem;
 }
 
 #container main article p kbd {
