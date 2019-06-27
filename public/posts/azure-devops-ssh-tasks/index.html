@@ -61,8 +61,19 @@
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#f92672">[</span>azure@remotelinux ~<span style="color:#f92672">]</span>$ ssh-keygen -t rsa -m PEM</code></pre></div>
 <p>Using the generated private key, add the information to the <code>Service Connections</code> in the <code>Project Settings</code>.</p>
 
+<p>The task should look like the below:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">- task: CopyFilesOverSSH@0
+  inputs:
+    sshEndpoint: <span style="color:#e6db74">&#39;azurevm&#39;</span>
+    sourceFolder: <span style="color:#e6db74">&#39;$(Agent.BuildDirectory)&#39;</span>
+    contents: <span style="color:#e6db74">&#39;**&#39;</span>
+    targetFolder: <span style="color:#e6db74">&#39;/home/azure&#39;</span></code></pre></div>
 <p>The SSH task to execute shell commands support default types of OpenSSH private keys which don&rsquo;t necessiraly have to be PEM files. It&rsquo;s also worth mentioning that the PEM files are support by the SSH tasks to execute shell commands. So it&rsquo;s safe to say that you can also use PEM files for any SSH tasks.</p>
-
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">- task: SSH@0
+  inputs:
+    sshEndpoint: <span style="color:#e6db74">&#39;azurevm&#39;</span>
+    runOptions: <span style="color:#e6db74">&#39;commands&#39;</span>
+    commands: <span style="color:#e6db74">&#39;ls -alt&#39;</span></code></pre></div>
 
 </article>
 

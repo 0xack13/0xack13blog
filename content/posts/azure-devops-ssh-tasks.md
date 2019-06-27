@@ -11,4 +11,23 @@ I took me some time to figure out that there is a difference in the type of the 
 ```
 Using the generated private key, add the information to the `Service Connections` in the `Project Settings`.
 
+The task should look like the below:
+
+```bash
+- task: CopyFilesOverSSH@0
+  inputs:
+    sshEndpoint: 'azurevm'
+    sourceFolder: '$(Agent.BuildDirectory)'
+    contents: '**'
+    targetFolder: '/home/azure'
+```
+
 The SSH task to execute shell commands support default types of OpenSSH private keys which don't necessiraly have to be PEM files. It's also worth mentioning that the PEM files are support by the SSH tasks to execute shell commands. So it's safe to say that you can also use PEM files for any SSH tasks.
+
+```bash
+- task: SSH@0
+  inputs:
+    sshEndpoint: 'azurevm'
+    runOptions: 'commands'
+    commands: 'ls -alt'
+```
