@@ -28,7 +28,7 @@
       
       <guid>https://adoring-euclid-0f6ef9.netlify.com/posts/dockerizing-aspnet-core-app/</guid>
       <description>Assuming that you have the correct docker environment, asp.net core app can run in a container using the following:
-FROMmcr.microsoft.com/dotnet/core/sdk:2.2 AS build-envWORKDIR/app# Copy csproj and restore as distinct layersCOPY *.csproj .</description>
+FROMmcr.microsoft.com/dotnet/core/sdk:2.2 AS build-envWORKDIR/app# Copy csproj and restore as distinct layersCOPY *.</description>
     </item>
     
     <item>

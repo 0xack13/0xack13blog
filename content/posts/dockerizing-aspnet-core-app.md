@@ -142,3 +142,37 @@ WORKDIR /app
 RUN go build -o main .                                                                              
 CMD ["/app/main"] 
 {{< /highlight >}}
+
+# React App - Static HTML
+
+Containerizing a React App should be a lot easier as we can use Nginx to serve the pages. We will be using WebPack to run Babel transpiler and copy that to our container.
+
+`Dockerfile`
+```Docker
+FROM tiangolo/node-frontend:10 as build-stage
+WORKDIR /app
+COPY package*.json /app/
+RUN npm install
+COPY ./ /app/
+RUN npm run build
+FROM nginx:1.15
+COPY --from=build-stage /app /usr/share/nginx/html
+COPY --from=build-stage /nginx.conf /etc/nginx/conf.d/default.conf
+```
+
+`webpack.config.js`
+```js
+const path = require('path')
+module.exports = {
+  entry: './src/index.js',
+  output: {
+    path: path.resolve('dist'),
+    filename: 'main.js'
+  },
+  module: {
+    loaders: [
+      { test: /\.jsx?$/, loader: 'babel-loader', exclude: /node_modules/ }
+    ]
+  }
+}
+```
