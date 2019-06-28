@@ -187,7 +187,7 @@
 <p>Containerizing a React App should be a lot easier as we can use Nginx to serve the pages. We will be using WebPack to run Babel transpiler and copy that to our container.</p>
 
 <p><code>Dockerfile</code></p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Docker" data-lang="Docker"><span style="color:#66d9ef">FROM</span><span style="color:#e6db74"> tiangolo/node-frontend:10 as build-stage</span><span style="color:#960050;background-color:#1e0010">
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Docker" data-lang="Docker"><span style="color:#66d9ef">FROM</span><span style="color:#e6db74"> node:alpine as build-stage</span><span style="color:#960050;background-color:#1e0010">
 </span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">WORKDIR</span><span style="color:#e6db74"> /app</span><span style="color:#960050;background-color:#1e0010">
 </span><span style="color:#960050;background-color:#1e0010"></span>COPY package*.json /app/<span style="color:#960050;background-color:#1e0010">
 </span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">RUN</span> npm install<span style="color:#960050;background-color:#1e0010">
@@ -195,7 +195,7 @@
 </span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">RUN</span> npm run build<span style="color:#960050;background-color:#1e0010">
 </span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">FROM</span><span style="color:#e6db74"> nginx:1.15</span><span style="color:#960050;background-color:#1e0010">
 </span><span style="color:#960050;background-color:#1e0010"></span>COPY --from<span style="color:#f92672">=</span>build-stage /app /usr/share/nginx/html<span style="color:#960050;background-color:#1e0010">
-</span><span style="color:#960050;background-color:#1e0010"></span>COPY --from<span style="color:#f92672">=</span>build-stage /nginx.conf /etc/nginx/conf.d/default.conf</code></pre></div>
+</span><span style="color:#960050;background-color:#1e0010"></span>COPY ./nginx.conf /etc/nginx/conf.d/default.conf</code></pre></div>
 <p><code>webpack.config.js</code></p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">path</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#39;path&#39;</span>)
 <span style="color:#a6e22e">module</span>.<span style="color:#a6e22e">exports</span> <span style="color:#f92672">=</span> {
@@ -210,7 +210,17 @@
     ]
   }
 }
-</code></pre></div>
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-nginx" data-lang="nginx"><span style="color:#66d9ef">server</span> {
+  <span style="color:#f92672">listen</span> <span style="color:#ae81ff">80</span>;
+  
+  <span style="color:#f92672">location</span> <span style="color:#e6db74">/</span> {
+    <span style="color:#f92672">root</span> <span style="color:#e6db74">/usr/share/nginx/html</span>;
+    <span style="color:#f92672">index</span> <span style="color:#e6db74">index.html</span> <span style="color:#e6db74">index.htm</span>;
+    <span style="color:#f92672">try_files</span> $uri $uri/ <span style="color:#e6db74">/index.html</span> =<span style="color:#ae81ff">404</span>;
+  }
+  
+  <span style="color:#f92672">include</span> <span style="color:#e6db74">/etc/nginx/extra-conf.d/*.conf</span>;
+}</code></pre></div>
 
 </article>
 

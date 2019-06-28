@@ -149,7 +149,7 @@ Containerizing a React App should be a lot easier as we can use Nginx to serve t
 
 `Dockerfile`
 ```Docker
-FROM tiangolo/node-frontend:10 as build-stage
+FROM node:alpine as build-stage
 WORKDIR /app
 COPY package*.json /app/
 RUN npm install
@@ -157,7 +157,7 @@ COPY ./ /app/
 RUN npm run build
 FROM nginx:1.15
 COPY --from=build-stage /app /usr/share/nginx/html
-COPY --from=build-stage /nginx.conf /etc/nginx/conf.d/default.conf
+COPY ./nginx.conf /etc/nginx/conf.d/default.conf
 ```
 
 `webpack.config.js`
@@ -174,5 +174,19 @@ module.exports = {
       { test: /\.jsx?$/, loader: 'babel-loader', exclude: /node_modules/ }
     ]
   }
+}
+```
+
+```nginx
+server {
+  listen 80;
+  
+  location / {
+    root /usr/share/nginx/html;
+    index index.html index.htm;
+    try_files $uri $uri/ /index.html =404;
+  }
+  
+  include /etc/nginx/extra-conf.d/*.conf;
 }
 ```
