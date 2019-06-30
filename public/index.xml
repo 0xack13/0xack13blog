@@ -1,54 +1,21 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>0xguid</title>
+    <title>0xguid </title>
     <link>https://adoring-euclid-0f6ef9.netlify.com/</link>
-    <description>Recent content on 0xguid</description>
-    <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>Copyright &amp;copy; 2019 - Saleh</copyright>
-    <lastBuildDate>Wed, 26 Jun 2019 14:49:47 -0400</lastBuildDate>
+    <author></author>
+    <rights>(C) 2019</rights>
+    <updated>2019-06-26 14:49:47 -0400 EDT</updated>
+
     
-	<atom:link href="https://adoring-euclid-0f6ef9.netlify.com/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    <item>
-      <title>Azure Devops Ssh Tasks</title>
-      <link>https://adoring-euclid-0f6ef9.netlify.com/posts/azure-devops-ssh-tasks/</link>
-      <pubDate>Wed, 26 Jun 2019 14:49:47 -0400</pubDate>
       
-      <guid>https://adoring-euclid-0f6ef9.netlify.com/posts/azure-devops-ssh-tasks/</guid>
-      <description>I took me some time to figure out that there is a difference in the type of the supported SSH keys in the task SSH to run a shell command or to copy files over SSH.</description>
-    </item>
     
-    <item>
-      <title>Dockerizing Aspnet Core App</title>
-      <link>https://adoring-euclid-0f6ef9.netlify.com/posts/dockerizing-aspnet-core-app/</link>
-      <pubDate>Wed, 26 Jun 2019 06:56:18 -0400</pubDate>
       
-      <guid>https://adoring-euclid-0f6ef9.netlify.com/posts/dockerizing-aspnet-core-app/</guid>
-      <description>Assuming that you have the correct docker environment, asp.net core app can run in a container using the following:
-FROMmcr.microsoft.com/dotnet/core/sdk:2.2 AS build-envWORKDIR/app# Copy csproj and restore as distinct layersCOPY *.</description>
-    </item>
     
-    <item>
-      <title>Dockerizing ASP.NET core app</title>
-      <link>https://adoring-euclid-0f6ef9.netlify.com/posts/hello/</link>
-      <pubDate>Thu, 25 Oct 2018 12:38:25 +1100</pubDate>
       
-      <guid>https://adoring-euclid-0f6ef9.netlify.com/posts/hello/</guid>
-      <description>Xamarin Forms bring a lot of flexiblity in terms of the mobile development for both iOS and Android platforms.
-public class Book { public string BookName { get; set; } }  Let&amp;rsquo;s feed a list of books with random data:</description>
-    </item>
     
-    <item>
-      <title>My First Post</title>
-      <link>https://adoring-euclid-0f6ef9.netlify.com/posts/my-first-post/</link>
-      <pubDate>Wed, 24 Oct 2018 21:20:42 +1100</pubDate>
       
-      <guid>https://adoring-euclid-0f6ef9.netlify.com/posts/my-first-post/</guid>
-      <description>In these series, I will show lessons that I noticed during my learning journey of the javaascript language. I&amp;rsquo;m trying here to highlight on each tip on a practical way rather than devling into the details.</description>
-    </item>
     
+
   </channel>
 </rss>
