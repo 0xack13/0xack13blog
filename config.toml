@@ -11,6 +11,14 @@ enableEmoji = true
 copyright = "Copyright &copy; 2019 - Saleh"
 pygmentsCodeFences = true
 
+tags = ["blog",]
+features = ["blog", ]
+min_version = 0.14
+
 [author]
-    name = "Saleh"       #Author name
-    github = "0xguid"     #Github username
+    name = "Saleh"
+
+[original]
+    author =  "Saleh"
+    homepage = "https://github.com/0xguid"
+    repo = "https://github.com/0xguid"
