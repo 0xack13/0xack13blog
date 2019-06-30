@@ -14,6 +14,7 @@ pygmentsCodeFences = true
 tags = ["blog",]
 features = ["blog", ]
 min_version = 0.14
+sidebar = false
 
 [author]
     name = "Saleh"
