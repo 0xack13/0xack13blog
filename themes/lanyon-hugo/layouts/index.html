@@ -1,7 +1,7 @@
 {{ partial "default_head.html" . }}
 
 <!-- Space delimited list of page types -->
-{{ $paginator := .Paginate (where .Data.Pages "Type" "in" "post") }}
+<!-- {{ $paginator := .Paginate (where .Data.Pages "Type" "in" "post") }}
 
 <div class="posts">
   {{ range .Paginator.Pages }}
@@ -25,6 +25,18 @@
   {{ else }}
   <span class="pagination-item newer">Newer</span>
   {{ end }}
+</div> -->
+
+
+<div class="post">
+  <h1 class="post-title">{{ .Title }}</h1>
+  <ul id="list">
+    {{ range .Data.Pages }}
+    <li>{{ .Site.Params.DateForm | default "Jan 2, 2006" | .Date.Format }} -
+      <a href="{{ .Permalink }}">{{ .Title }}</a>
+    </li>
+    {{ end }}
+  </ul>
 </div>
 
 {{ partial "default_foot.html" . }}
