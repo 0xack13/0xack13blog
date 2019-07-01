@@ -808,6 +808,7 @@ pre {
 }
 footer {
   margin-bottom: 2rem;
+  display: block;
 }
 pre code {
   font-size: 100%;
@@ -1220,4 +1221,21 @@ a[class~="pagination-item"]:hover {
   text-align: center;
   background-color: #f9f9f9;
   border-top: .05rem solid #e5e5e5;
+}
+
+[class~="masthead"],
+[class~="masthead-footer"] {
+  margin-bottom: 0;
+}
+[class~="masthead-footer"],
+[class~="masthead"] nav {
+  margin-top: 0rem;
+}
+[class~="masthead"] nav a,
+[class~="masthead-footer"],
+.masthead-title a {
+  color: #505050;
+}
+[class~="masthead-footer"] {
+  float: center;
 }
