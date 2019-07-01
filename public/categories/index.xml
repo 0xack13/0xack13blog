@@ -2,31 +2,31 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on 0xguid</title>
-    <link>https://adoring-euclid-0f6ef9.netlify.com/categories/</link>
+    <link>https://dslash.xyz/categories/</link>
     <description>Recent content in Categories on 0xguid</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Copyright &amp;copy; 2019 - Saleh</copyright>
     <lastBuildDate>Wed, 24 Oct 2018 21:20:42 +1100</lastBuildDate>
     
-	<atom:link href="https://adoring-euclid-0f6ef9.netlify.com/categories/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://dslash.xyz/categories/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>development</title>
-      <link>https://adoring-euclid-0f6ef9.netlify.com/categories/development/</link>
+      <link>https://dslash.xyz/categories/development/</link>
       <pubDate>Wed, 24 Oct 2018 21:20:42 +1100</pubDate>
       
-      <guid>https://adoring-euclid-0f6ef9.netlify.com/categories/development/</guid>
+      <guid>https://dslash.xyz/categories/development/</guid>
       <description></description>
     </item>
     
     <item>
       <title>publishing</title>
-      <link>https://adoring-euclid-0f6ef9.netlify.com/categories/publishing/</link>
+      <link>https://dslash.xyz/categories/publishing/</link>
       <pubDate>Wed, 24 Oct 2018 21:20:42 +1100</pubDate>
       
-      <guid>https://adoring-euclid-0f6ef9.netlify.com/categories/publishing/</guid>
+      <guid>https://dslash.xyz/categories/publishing/</guid>
       <description></description>
     </item>
     

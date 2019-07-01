@@ -3,81 +3,81 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://adoring-euclid-0f6ef9.netlify.com/</loc>
+    <loc>https://dslash.xyz/</loc>
     <lastmod>2019-06-26T14:49:47-04:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://adoring-euclid-0f6ef9.netlify.com/posts/azure-devops-ssh-tasks/</loc>
+    <loc>https://dslash.xyz/posts/azure-devops-ssh-tasks/</loc>
     <lastmod>2019-06-26T14:49:47-04:00</lastmod>
   </url>
   
   <url>
-    <loc>https://adoring-euclid-0f6ef9.netlify.com/posts/</loc>
+    <loc>https://dslash.xyz/posts/</loc>
     <lastmod>2019-06-26T14:49:47-04:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://adoring-euclid-0f6ef9.netlify.com/posts/dockerizing-aspnet-core-app/</loc>
+    <loc>https://dslash.xyz/posts/dockerizing-aspnet-core-app/</loc>
     <lastmod>2019-06-26T06:56:18-04:00</lastmod>
   </url>
   
   <url>
-    <loc>https://adoring-euclid-0f6ef9.netlify.com/posts/hello/</loc>
+    <loc>https://dslash.xyz/posts/hello/</loc>
     <lastmod>2018-10-25T12:38:25+11:00</lastmod>
   </url>
   
   <url>
-    <loc>https://adoring-euclid-0f6ef9.netlify.com/categories/</loc>
+    <loc>https://dslash.xyz/categories/</loc>
     <lastmod>2018-10-24T21:20:42+11:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://adoring-euclid-0f6ef9.netlify.com/posts/my-first-post/</loc>
+    <loc>https://dslash.xyz/posts/my-first-post/</loc>
     <lastmod>2018-10-24T21:20:42+11:00</lastmod>
   </url>
   
   <url>
-    <loc>https://adoring-euclid-0f6ef9.netlify.com/tags/</loc>
-    <lastmod>2018-10-24T21:20:42+11:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://adoring-euclid-0f6ef9.netlify.com/tags/code/</loc>
+    <loc>https://dslash.xyz/tags/</loc>
     <lastmod>2018-10-24T21:20:42+11:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://adoring-euclid-0f6ef9.netlify.com/tags/content/</loc>
+    <loc>https://dslash.xyz/tags/code/</loc>
     <lastmod>2018-10-24T21:20:42+11:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://adoring-euclid-0f6ef9.netlify.com/categories/development/</loc>
+    <loc>https://dslash.xyz/tags/content/</loc>
     <lastmod>2018-10-24T21:20:42+11:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://adoring-euclid-0f6ef9.netlify.com/tags/hugo/</loc>
+    <loc>https://dslash.xyz/categories/development/</loc>
     <lastmod>2018-10-24T21:20:42+11:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://adoring-euclid-0f6ef9.netlify.com/categories/publishing/</loc>
+    <loc>https://dslash.xyz/tags/hugo/</loc>
     <lastmod>2018-10-24T21:20:42+11:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://adoring-euclid-0f6ef9.netlify.com/tags/static-site-generator/</loc>
+    <loc>https://dslash.xyz/categories/publishing/</loc>
+    <lastmod>2018-10-24T21:20:42+11:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://dslash.xyz/tags/static-site-generator/</loc>
     <lastmod>2018-10-24T21:20:42+11:00</lastmod>
     <priority>0</priority>
   </url>

@@ -2,49 +2,49 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on 0xguid</title>
-    <link>https://adoring-euclid-0f6ef9.netlify.com/tags/</link>
+    <link>https://dslash.xyz/tags/</link>
     <description>Recent content in Tags on 0xguid</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Copyright &amp;copy; 2019 - Saleh</copyright>
     <lastBuildDate>Wed, 24 Oct 2018 21:20:42 +1100</lastBuildDate>
     
-	<atom:link href="https://adoring-euclid-0f6ef9.netlify.com/tags/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://dslash.xyz/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>code</title>
-      <link>https://adoring-euclid-0f6ef9.netlify.com/tags/code/</link>
+      <link>https://dslash.xyz/tags/code/</link>
       <pubDate>Wed, 24 Oct 2018 21:20:42 +1100</pubDate>
       
-      <guid>https://adoring-euclid-0f6ef9.netlify.com/tags/code/</guid>
+      <guid>https://dslash.xyz/tags/code/</guid>
       <description></description>
     </item>
     
     <item>
       <title>content</title>
-      <link>https://adoring-euclid-0f6ef9.netlify.com/tags/content/</link>
+      <link>https://dslash.xyz/tags/content/</link>
       <pubDate>Wed, 24 Oct 2018 21:20:42 +1100</pubDate>
       
-      <guid>https://adoring-euclid-0f6ef9.netlify.com/tags/content/</guid>
+      <guid>https://dslash.xyz/tags/content/</guid>
       <description></description>
     </item>
     
     <item>
       <title>hugo</title>
-      <link>https://adoring-euclid-0f6ef9.netlify.com/tags/hugo/</link>
+      <link>https://dslash.xyz/tags/hugo/</link>
       <pubDate>Wed, 24 Oct 2018 21:20:42 +1100</pubDate>
       
-      <guid>https://adoring-euclid-0f6ef9.netlify.com/tags/hugo/</guid>
+      <guid>https://dslash.xyz/tags/hugo/</guid>
       <description></description>
     </item>
     
     <item>
       <title>static site generator</title>
-      <link>https://adoring-euclid-0f6ef9.netlify.com/tags/static-site-generator/</link>
+      <link>https://dslash.xyz/tags/static-site-generator/</link>
       <pubDate>Wed, 24 Oct 2018 21:20:42 +1100</pubDate>
       
-      <guid>https://adoring-euclid-0f6ef9.netlify.com/tags/static-site-generator/</guid>
+      <guid>https://dslash.xyz/tags/static-site-generator/</guid>
       <description></description>
     </item>
     
