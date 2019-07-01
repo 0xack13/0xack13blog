@@ -692,7 +692,7 @@ figure[class~="highlight"] {
   padding-bottom: 1rem;
 }
 code {
-  background-color: #272822;
+  background-color: #f9f9f9;
 }
 [class~="highlight"] [class~="go"] {
   color: #aaa;
@@ -821,7 +821,7 @@ pre code {
   color: #c30;
 }
 .highlight {
-  background-color: #f9f9f9;
+  background-color: #272822;
 }
 [class~="highlight"] [class~="sd"] {
   font-style: italic;
