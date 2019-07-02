@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+
+  <head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title>
+    
+      Graph Implementation &middot; 
+    
+  </title>
+
+  
+
+  
+  
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,700italic,400italic">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://dslash.xyz/css/styles.css">
+
+  
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="https://dslash.xyz/atom.xml">
+</head>
+
+
+
+  <body>
+
+    
+
+   
+
+    
+    
+        <div class="container content">
+          
+          <header class="masthead">
+            <h3 class="masthead-title">
+              <a href="https://dslash.xyz/" title="Home">0xguid</a>
+              <small><i class="fa fa-code"></i> Cloud and software development</small>
+            </h3>
+          
+            <nav>
+              
+              <a href="https://github.com/0xguid"><i class="fa fa-github"></i></a>
+              <a href="mailto:0xguid@gmail.com"><i class="fa fa-envelope"></i></a>
+            </nav>
+            <div class="cf"></div>
+          </header>
+      <main>
+
+
+        
+
+      
+
+
+<div class="post">
+  <h1 class="post-title">Graph Implementation</h1>
+  <span class="post-date">Jul 1, 2019</span>
+  <p>Graph can be implemented in python using the code below:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Graph</span>(object):
+
+    <span style="color:#66d9ef">def</span> __init__(self, graph_dict<span style="color:#f92672">=</span>None):
+        <span style="color:#e6db74">&#34;&#34;&#34; initializes a graph object 
+</span><span style="color:#e6db74">            If no dictionary or None is given, 
+</span><span style="color:#e6db74">            an empty dictionary will be used
+</span><span style="color:#e6db74">        &#34;&#34;&#34;</span>
+        <span style="color:#66d9ef">if</span> graph_dict <span style="color:#f92672">==</span> None:
+            graph_dict <span style="color:#f92672">=</span> {}
+        self<span style="color:#f92672">.</span>__graph_dict <span style="color:#f92672">=</span> graph_dict
+
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">vertices</span>(self):
+        <span style="color:#e6db74">&#34;&#34;&#34; returns the vertices of a graph &#34;&#34;&#34;</span>
+        <span style="color:#66d9ef">return</span> list(self<span style="color:#f92672">.</span>__graph_dict<span style="color:#f92672">.</span>keys())
+
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">edges</span>(self):
+        <span style="color:#e6db74">&#34;&#34;&#34; returns the edges of a graph &#34;&#34;&#34;</span>
+        <span style="color:#66d9ef">return</span> self<span style="color:#f92672">.</span>__generate_edges()
+
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">add_vertex</span>(self, vertex):
+        <span style="color:#e6db74">&#34;&#34;&#34; If the vertex &#34;vertex&#34; is not in 
+</span><span style="color:#e6db74">            self.__graph_dict, a key &#34;vertex&#34; with an empty
+</span><span style="color:#e6db74">            list as a value is added to the dictionary. 
+</span><span style="color:#e6db74">            Otherwise nothing has to be done. 
+</span><span style="color:#e6db74">        &#34;&#34;&#34;</span>
+        <span style="color:#66d9ef">if</span> vertex <span style="color:#f92672">not</span> <span style="color:#f92672">in</span> self<span style="color:#f92672">.</span>__graph_dict:
+            self<span style="color:#f92672">.</span>__graph_dict[vertex] <span style="color:#f92672">=</span> []
+
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">add_edge</span>(self, edge):
+        <span style="color:#e6db74">&#34;&#34;&#34; assumes that edge is of type set, tuple or list; 
+</span><span style="color:#e6db74">            between two vertices can be multiple edges! 
+</span><span style="color:#e6db74">        &#34;&#34;&#34;</span>
+        edge <span style="color:#f92672">=</span> set(edge)
+        (vertex1, vertex2) <span style="color:#f92672">=</span> tuple(edge)
+        <span style="color:#66d9ef">if</span> vertex1 <span style="color:#f92672">in</span> self<span style="color:#f92672">.</span>__graph_dict:
+            self<span style="color:#f92672">.</span>__graph_dict[vertex1]<span style="color:#f92672">.</span>append(vertex2)
+        <span style="color:#66d9ef">else</span>:
+            self<span style="color:#f92672">.</span>__graph_dict[vertex1] <span style="color:#f92672">=</span> [vertex2]
+
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">__generate_edges</span>(self):
+        <span style="color:#e6db74">&#34;&#34;&#34; A static method generating the edges of the 
+</span><span style="color:#e6db74">            graph &#34;graph&#34;. Edges are represented as sets 
+</span><span style="color:#e6db74">            with one (a loop back to the vertex) or two 
+</span><span style="color:#e6db74">            vertices 
+</span><span style="color:#e6db74">        &#34;&#34;&#34;</span>
+        edges <span style="color:#f92672">=</span> []
+        <span style="color:#66d9ef">for</span> vertex <span style="color:#f92672">in</span> self<span style="color:#f92672">.</span>__graph_dict:
+            <span style="color:#66d9ef">for</span> neighbour <span style="color:#f92672">in</span> self<span style="color:#f92672">.</span>__graph_dict[vertex]:
+                <span style="color:#66d9ef">if</span> {neighbour, vertex} <span style="color:#f92672">not</span> <span style="color:#f92672">in</span> edges:
+                    edges<span style="color:#f92672">.</span>append({vertex, neighbour})
+                    <span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#34;Edges are: &#34;</span> <span style="color:#f92672">+</span> str(edges))
+        <span style="color:#66d9ef">return</span> edges
+
+    <span style="color:#66d9ef">def</span> __str__(self):
+        res <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;vertices: &#34;</span>
+        <span style="color:#66d9ef">for</span> k <span style="color:#f92672">in</span> self<span style="color:#f92672">.</span>__graph_dict:
+            res <span style="color:#f92672">+=</span> str(k) <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34; &#34;</span>
+        res <span style="color:#f92672">+=</span> <span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">edges: &#34;</span>
+        <span style="color:#66d9ef">for</span> edge <span style="color:#f92672">in</span> self<span style="color:#f92672">.</span>__generate_edges():
+            res <span style="color:#f92672">+=</span> str(edge) <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34; &#34;</span>
+        <span style="color:#66d9ef">return</span> res
+    
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">find_path</span>(self, start_vertex, end_vertex, path<span style="color:#f92672">=</span>None):
+        <span style="color:#66d9ef">if</span> path <span style="color:#f92672">==</span> None:
+            path <span style="color:#f92672">=</span> []
+        graph <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>__graph_dict
+        path <span style="color:#f92672">=</span> path <span style="color:#f92672">+</span> [start_vertex]
+        <span style="color:#66d9ef">if</span> start_vertex <span style="color:#f92672">==</span> end_vertex:
+            <span style="color:#66d9ef">return</span> path
+        <span style="color:#66d9ef">if</span> start_vertex <span style="color:#f92672">not</span> <span style="color:#f92672">in</span> path:
+            <span style="color:#66d9ef">return</span> None
+        <span style="color:#66d9ef">for</span> vertex <span style="color:#f92672">in</span> graph[start_vertex]:
+            <span style="color:#66d9ef">if</span> vertex <span style="color:#f92672">not</span> <span style="color:#f92672">in</span> path:
+                extended_path <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>find_path(vertex, end_vertex, path)
+                <span style="color:#66d9ef">if</span> extended_path:
+                    <span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#34;Extended path: &#34;</span> <span style="color:#f92672">+</span> str(extended_path))
+                    <span style="color:#66d9ef">return</span> extended_path
+        <span style="color:#66d9ef">return</span> None
+
+
+<span style="color:#66d9ef">if</span> __name__ <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;__main__&#34;</span>:
+
+    g <span style="color:#f92672">=</span> { <span style="color:#e6db74">&#34;a&#34;</span> : [<span style="color:#e6db74">&#34;d&#34;</span>],
+          <span style="color:#e6db74">&#34;b&#34;</span> : [<span style="color:#e6db74">&#34;c&#34;</span>],
+          <span style="color:#e6db74">&#34;c&#34;</span> : [<span style="color:#e6db74">&#34;b&#34;</span>, <span style="color:#e6db74">&#34;c&#34;</span>, <span style="color:#e6db74">&#34;d&#34;</span>, <span style="color:#e6db74">&#34;e&#34;</span>],
+          <span style="color:#e6db74">&#34;d&#34;</span> : [<span style="color:#e6db74">&#34;a&#34;</span>, <span style="color:#e6db74">&#34;c&#34;</span>],
+          <span style="color:#e6db74">&#34;e&#34;</span> : [<span style="color:#e6db74">&#34;c&#34;</span>],
+          <span style="color:#e6db74">&#34;f&#34;</span> : []
+        }
+
+
+    graph <span style="color:#f92672">=</span> Graph(g)
+
+    <span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#34;Vertices of graph:&#34;</span>)
+    <span style="color:#66d9ef">print</span>(graph<span style="color:#f92672">.</span>vertices())
+
+    <span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#34;Edges of graph:&#34;</span>)
+    <span style="color:#66d9ef">print</span>(graph<span style="color:#f92672">.</span>edges())
+
+    <span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#34;Add vertex:&#34;</span>)
+    graph<span style="color:#f92672">.</span>add_vertex(<span style="color:#e6db74">&#34;z&#34;</span>)
+
+    <span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#34;Vertices of graph:&#34;</span>)
+    <span style="color:#66d9ef">print</span>(graph<span style="color:#f92672">.</span>vertices())
+ 
+    <span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#34;Add an edge:&#34;</span>)
+    graph<span style="color:#f92672">.</span>add_edge({<span style="color:#e6db74">&#34;a&#34;</span>,<span style="color:#e6db74">&#34;z&#34;</span>})
+    
+    <span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#34;Vertices of graph:&#34;</span>)
+    <span style="color:#66d9ef">print</span>(graph<span style="color:#f92672">.</span>vertices())
+
+    <span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#34;Edges of graph:&#34;</span>)
+    <span style="color:#66d9ef">print</span>(graph<span style="color:#f92672">.</span>edges())
+
+    <span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#39;Adding an edge {&#34;x&#34;,&#34;y&#34;} with new vertices:&#39;</span>)
+    graph<span style="color:#f92672">.</span>add_edge({<span style="color:#e6db74">&#34;x&#34;</span>,<span style="color:#e6db74">&#34;y&#34;</span>})
+    <span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#34;Vertices of graph:&#34;</span>)
+    <span style="color:#66d9ef">print</span>(graph<span style="color:#f92672">.</span>vertices())
+    <span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#34;Edges of graph:&#34;</span>)
+    <span style="color:#66d9ef">print</span>(graph<span style="color:#f92672">.</span>edges())
+
+    <span style="color:#75715e"># Find paths</span>
+    <span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#39;The path from vertex &#34;a&#34; to vertex &#34;b&#34;:&#39;</span>)
+    path <span style="color:#f92672">=</span> graph<span style="color:#f92672">.</span>find_path(<span style="color:#e6db74">&#34;a&#34;</span>, <span style="color:#e6db74">&#34;b&#34;</span>)
+    <span style="color:#66d9ef">print</span>(path)
+
+    <span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#39;The path from vertex &#34;a&#34; to vertex &#34;f&#34;:&#39;</span>)
+    path <span style="color:#f92672">=</span> graph<span style="color:#f92672">.</span>find_path(<span style="color:#e6db74">&#34;a&#34;</span>, <span style="color:#e6db74">&#34;f&#34;</span>)
+    <span style="color:#66d9ef">print</span>(path)
+
+    <span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#39;The path from vertex &#34;c&#34; to vertex &#34;c&#34;:&#39;</span>)
+    path <span style="color:#f92672">=</span> graph<span style="color:#f92672">.</span>find_path(<span style="color:#e6db74">&#34;c&#34;</span>, <span style="color:#e6db74">&#34;c&#34;</span>)
+    <span style="color:#66d9ef">print</span>(path)</code></pre></div>
+</div>
+
+
+
+
+<header class="masthead">
+    
+  
+    <nav>
+      
+      <a href="#"><i class="fa fa-arrow-up"></i></a>
+      <a href="https://github.com/0xguid"><i class="fa fa-github"></i></a>
+      <a href="mailto:0xguid@gmail.com"><i class="fa fa-envelope"></i></a>
+    </nav>
+    <div class="cf"></div>
+  </header>
+</main>
+</div>
+    
+  </body>
+</html>
+
