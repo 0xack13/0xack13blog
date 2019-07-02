@@ -34,4 +34,23 @@ def get_http_resource(url):
     title = str(contents).split('<title>')[1].split('</title>')[0]
     return title
 ```
+Now, let's open Python shell and explore the package:
 
+```python
+Python 3.5.0 (default, Jun 29 2017, 22:45:13)
+[GCC 4.2.1 Compatible Apple LLVM 8.1.0 (clang-802.0.42)] on darwin
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import httpcall
+>>> dir(httpcall)
+['__builtins__', '__cached__', '__doc__', '__file__', '__loader__', '__name__', '__package__', '__spec__', '_verify_url', 'get_http_resource', 'urllib', 'urlparse']
+>>> from httpcall import *
+>>> _verify_url("http://google.com") # method can't be called due to the underscore "private"
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name '_verify_url' is not defined
+>>> get_http_resource("http://google.com")
+'Google'
+>>> import httpcall as hc
+>>> hc._verify_url("http://google.com") # calling the private method directly is possible using the normal import 
+True
+```
