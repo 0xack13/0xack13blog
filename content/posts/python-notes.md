@@ -13,18 +13,25 @@ Here's a collection of notes that I believe it's worth sharing in Python.
 
 You can define a private method in Python by specifying the underscore `_` which is considered a general convention in the Python code for defining private variables. As an example, we can create a file `httpcall.py` and use the following code:
 
-{{< highlight python >}}
-def func():
-    return "datacamp"
-
-def _private_func():
-    return 7
-{{< /highlight >}}
-
+`httpcall.py`
 ```python
-def func():
-    return "datacamp"
+import urllib.request
+from urllib.parse import urlparse
 
-def _private_func():
-    return 7
+# private function
+def _verify_url(url):
+    try:
+        result = urlparse(url)
+        return all([result.scheme, result.netloc])
+    except:
+        return False
+
+# public method
+def get_http_resource(url):
+    if _verify_url(url) == False:
+        return "Error parsing the provided URL."
+    contents = urllib.request.urlopen(url).read()
+    title = str(contents).split('<title>')[1].split('</title>')[0]
+    return title
 ```
+

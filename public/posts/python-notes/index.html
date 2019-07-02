@@ -74,16 +74,25 @@
 
 <p>You can define a private method in Python by specifying the underscore <code>_</code> which is considered a general convention in the Python code for defining private variables. As an example, we can create a file <code>httpcall.py</code> and use the following code:</p>
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">func</span>():
-    <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;datacamp&#34;</span>
+<p><code>httpcall.py</code></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> urllib.request
+<span style="color:#f92672">from</span> urllib.parse <span style="color:#f92672">import</span> urlparse
 
-<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">_private_func</span>():
-    <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">7</span></code></pre></div>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">func</span>():
-    <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;datacamp&#34;</span>
+<span style="color:#75715e"># private function</span>
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">_verify_url</span>(url):
+    <span style="color:#66d9ef">try</span>:
+        result <span style="color:#f92672">=</span> urlparse(url)
+        <span style="color:#66d9ef">return</span> all([result<span style="color:#f92672">.</span>scheme, result<span style="color:#f92672">.</span>netloc])
+    <span style="color:#66d9ef">except</span>:
+        <span style="color:#66d9ef">return</span> False
 
-<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">_private_func</span>():
-    <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">7</span></code></pre></div>
+<span style="color:#75715e"># public method</span>
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">get_http_resource</span>(url):
+    <span style="color:#66d9ef">if</span> _verify_url(url) <span style="color:#f92672">==</span> False:
+        <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;Error parsing the provided URL.&#34;</span>
+    contents <span style="color:#f92672">=</span> urllib<span style="color:#f92672">.</span>request<span style="color:#f92672">.</span>urlopen(url)<span style="color:#f92672">.</span>read()
+    title <span style="color:#f92672">=</span> str(contents)<span style="color:#f92672">.</span>split(<span style="color:#e6db74">&#39;&lt;title&gt;&#39;</span>)[<span style="color:#ae81ff">1</span>]<span style="color:#f92672">.</span>split(<span style="color:#e6db74">&#39;&lt;/title&gt;&#39;</span>)[<span style="color:#ae81ff">0</span>]
+    <span style="color:#66d9ef">return</span> title</code></pre></div>
 </div>
 
 
