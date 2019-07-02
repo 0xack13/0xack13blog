@@ -54,3 +54,4 @@ NameError: name '_verify_url' is not defined
 >>> hc._verify_url("http://google.com") # calling the private method directly is possible using the normal import 
 True
 ```
+Please note that there is no enforcement in having the private variable defined by using the underscore. Rather, it's a convention for the developers in which they can emphsize the accessiblity level of that variable.
