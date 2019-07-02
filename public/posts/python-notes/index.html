@@ -10,7 +10,7 @@
 
   <title>
     
-      Posts &middot; 
+      Python Notes &middot; 
     
   </title>
 
@@ -60,30 +60,30 @@
 
 
 <div class="post">
-  <h1 class="post-title">Posts</h1>
-  <ul id="list">
-    
-    <li>Jul 1, 2019 -
-      <a href="https://dslash.xyz/posts/python-notes/">Python Notes</a>
-    </li>
-    
-    <li>Jun 26, 2019 -
-      <a href="https://dslash.xyz/posts/azure-devops-ssh-tasks/">Azure Devops Ssh Tasks</a>
-    </li>
-    
-    <li>Jun 26, 2019 -
-      <a href="https://dslash.xyz/posts/dockerizing-aspnet-core-app/">Dockerizing Aspnet Core App</a>
-    </li>
-    
-    <li>Oct 25, 2018 -
-      <a href="https://dslash.xyz/posts/hello/">Dockerizing ASP.NET core app</a>
-    </li>
-    
-    <li>Oct 24, 2018 -
-      <a href="https://dslash.xyz/posts/my-first-post/">My First Post</a>
-    </li>
-    
-  </ul>
+  <h1 class="post-title">Python Notes</h1>
+  <span class="post-date">Jul 1, 2019</span>
+  
+
+<p>Here&rsquo;s a collection of notes that I believe it&rsquo;s worth sharing in Python.</p>
+
+<ul>
+<li><a href="#privatemethod">privatemethod</a></li>
+</ul>
+
+<h3 id="a-id-privatemethod-a-private-methods-with-underscore"><a id="privatemethod"></a> Private Methods with Underscore</h3>
+
+<p>You can define a private method in Python by specifying the underscore <code>_</code> which is considered a general convention in the Python code for defining private variables. As an example, we can create a file <code>httpcall.py</code> and use the following code:</p>
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">func</span>():
+    <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;datacamp&#34;</span>
+
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">_private_func</span>():
+    <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">7</span></code></pre></div>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">func</span>():
+    <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;datacamp&#34;</span>
+
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">_private_func</span>():
+    <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">7</span></code></pre></div>
 </div>
 
 

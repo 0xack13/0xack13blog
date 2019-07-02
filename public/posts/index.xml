@@ -7,10 +7,20 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Copyright &amp;copy; 2019 - Saleh</copyright>
-    <lastBuildDate>Wed, 26 Jun 2019 14:49:47 -0400</lastBuildDate>
+    <lastBuildDate>Mon, 01 Jul 2019 21:46:38 -0400</lastBuildDate>
     
 	<atom:link href="https://dslash.xyz/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Python Notes</title>
+      <link>https://dslash.xyz/posts/python-notes/</link>
+      <pubDate>Mon, 01 Jul 2019 21:46:38 -0400</pubDate>
+      
+      <guid>https://dslash.xyz/posts/python-notes/</guid>
+      <description>Here&amp;rsquo;s a collection of notes that I believe it&amp;rsquo;s worth sharing in Python.
+ privatemethod   Private Methods with Underscore You can define a private method in Python by specifying the underscore _ which is considered a general convention in the Python code for defining private variables.</description>
+    </item>
     
     <item>
       <title>Azure Devops Ssh Tasks</title>
